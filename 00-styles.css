@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0; 
+    padding: 0; 
+    width: 100%;
+}
+
+/*-------------------------HERO SECTION---------------------------------*/
+
+.hero-section{
+    background-image: url(/images/headphones_hero_1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    height: 830px;
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 100%;
+    max-width: none;
+}
+
+.hero-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.hero-header-content{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    height: 32px;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+.hero-header-content .menu-icon{
+    display: none;
+}
+
+.hero-body {
+    display: flex;
+    width: 100%;
+    max-width: 637px;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 320px;
+}
+
+.hero-body .hero-title *{
+    margin: 0 !important;
+    padding: 0 !important;
+    font-weight: bold;
+}
+
+.hero-body .hero-section-paragraph{
+    margin-top: 70px;
+}
+
+
+.hero-body .hero-button-div .hero-button{
+    margin-top: 60px;
+    background-color: #FF6565;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Source Sans Pro', sans-serif;
+    border-radius: 30px;
+    height: 44px;
+    width: 162px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    font-weight: semi-bold;
+}
+
+.hero-body .hero-button-div .hero-button{
+    opacity: 0.9;
+}
+
+
+#Repertories{
+    display: flex;
+    flex-direction: row;
+    width: 255px;
+    gap: 40px;
+    font-size: 12px;
+}
+
+#Repertories .repertories{
+    all: unset;
+    cursor: pointer;
+    
+}
+
+#Repertories .repertories:hover{
+    color: red;
+}
+
+#hero-logo-img{
+    width: 160px;
+    height: 30px;
+}
+
+.hero-header-content .menu-btn{
+    display: none;
+}
+
+.menu-btn:checked ~ .navbar-menu{
+    display: block;
+}
+
+
+.menu-btn:checked ~ .navbar-menu .nav{
+    max-height: 100%;
+    overflow: inherit;
+}
+
+
+.header .menu-btn:checked + .menu-icon .navicon{
+    background: transparent;
+}
+
+.header .menu-btn:checked + .menu-icon .navicon::before{
+    transform: rotate(-45deg);
+    background-color: var(--color-white)
+}
+
+.header .menu-btn:checked + .menu-icon .navicon::after{
+    transform: rotate(45deg) ;
+    background-color: var(--color-white)
+}
+
+.header .menu-btn:checked + .menu-icon .navicon::before, 
+.header .menu-btn:checked + .menu-icon .navicon::after{ /*why do this ?? we could just add top 0 at both selector !!*/
+    top: 0;
+}
+
+/*responsive*/
+@media screen and (max-width: 767px) {
+    .hero-header-content{
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .hero-header-content .menu-icon{ /* Change from .header .menu-icon */
+        display: block;
+    }
+    #Repertories{
+        display: none; 
+    }
+
+.hero-header-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    height: 32px;
+    padding-top: 20px;
+}
+
+}
