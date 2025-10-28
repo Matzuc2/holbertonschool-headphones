@@ -317,14 +317,29 @@ wwd-options and the other adding fit-content, gap and padding, i wanted to pract
     align-items: center;
     gap: 80px;
 }
+.or-intro-div{
+    max-width: 637px;
+    text-align: center;
+    color: white;
+    gap: 50px;
+}
+.or-intro-div h1{
+    font-weight: 600;
+}
+.or-intro-div p{
+    line-height: 26px;
+    margin-top: 45px;
+}
+
 .or-icons-div{
     display: flex;
     flex-direction: row;
     gap: 50px;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     max-width: 1000px;
     margin: 0 auto;
 }
+
 .pentagon-result{
     background-image: url('./images/pentagone.png');
     background-size: contain;
@@ -347,4 +362,48 @@ wwd-options and the other adding fit-content, gap and padding, i wanted to pract
 .pentagon-result-text h3{
     font-size: 45px;
     margin: 0 !important;
+}
+
+/*-----responsive-------*/
+
+@media screen and (max-width: 767px) {
+    .our-results-section{
+    height: 876px;
+}
+    
+    .or-icons-div{
+        max-width: 500px;
+        height: 469px;
+        align-content: space-between;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .our-results-section{
+        height: fit-content;
+        gap: 100px;
+    }
+
+    .or-icons-div {
+        max-width: 207px;
+        height: fit-content;
+        align-content: space-between;
+        gap: 80px;
+        padding-bottom: 100px;
+    }
+
+    .or-intro-div {
+        padding-top: 80px;
+        display: flex; 
+        flex-direction: column; 
+        align-items: center;
+        gap: 20px;
+    }
+
+    .or-intro-div p{
+        width: 305px;
+        margin-top: 0; 
+        text-align: center;
+    }
 }
