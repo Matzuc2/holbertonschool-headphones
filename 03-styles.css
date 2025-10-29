@@ -407,3 +407,80 @@ wwd-options and the other adding fit-content, gap and padding, i wanted to pract
         text-align: center;
     }
 }
+
+/*-------------contact-us----------*/
+
+.contact-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    flex-direction: column;
+}
+
+.contact-section h3{
+    font-size: 50px;
+    align-self: center;
+    margin: 0 !important;
+    font-weight: 600;
+}
+.contact-section .dumb-button-div{
+    align-self: center;
+}
+
+#dumb-button{
+    background-color: #FF6565;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Source Sans Pro', sans-serif;
+    border-radius: 30px;
+    height: 55px;
+    width: 200px;
+    font-weight: 600;
+}
+
+.contact-div{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 533px;
+    gap: 60px;
+
+}
+
+.inputs-div{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+}
+
+.input-label {
+    order: -1;
+}
+.input-div{
+    height: fit-content;
+    font-size: 200px;
+    height: 100%;
+}
+
+.input-data {
+    background: transparent;
+    border: none; 
+    border-bottom: 1px solid #071629;
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #071629;
+    outline: none;
+    width: 100%;
+    line-height: 3;
+}
+
+.input-data::placeholder {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 600;
+}
