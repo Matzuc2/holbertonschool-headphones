@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+@import url('./images/holberton_school-icon/style.css');
+
+@import url('../images/holberton_school-icon/style.css');
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0; 
+    padding: 0; 
+    width: 100%;
+}
+
+/*-------------------------HERO SECTION---------------------------------*/
+
+.hero-section{
+    background-image: url(/images/headphones_hero_1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    height: 830px;
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 100%;
+    max-width: none;
+}
+
+.hero-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.hero-header-content{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    height: 32px;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+.hero-header-content .menu-icon{
+    display: none;
+}
+
+.hero-body {
+    display: flex;
+    width: 100%;
+    max-width: 637px;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 320px;
+}
+
+.hero-body .hero-title *{
+    margin: 0 !important;
+    padding: 0 !important;
+    font-weight: bold;
+}
+
+.hero-body .hero-section-paragraph{
+    margin-top: 70px;
+}
+
+
+.hero-body .hero-button-div .hero-button{
+    margin-top: 60px;
+    background-color: #FF6565;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Source Sans Pro', sans-serif;
+    border-radius: 30px;
+    height: 44px;
+    width: 162px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    font-weight: semi-bold;
+}
+
+.hero-body .hero-button-div .hero-button{
+    opacity: 0.9;
+}
+
+
+#Repertories{
+    display: flex;
+    flex-direction: row;
+    width: 255px;
+    gap: 40px;
+    font-size: 12px;
+}
+
+#Repertories .repertories{
+    all: unset;
+    cursor: pointer;
+    
+}
+
+#Repertories .repertories:hover{
+    color: red;
+}
+
+#hero-logo-img{
+    width: 160px;
+    height: 30px;
+}
+
+.hero-header-content .menu-btn{
+    display: none;
+}
+
+.menu-btn:checked ~ .navbar-menu{
+    display: block;
+}
+
+
+.menu-btn:checked ~ .navbar-menu .nav{
+    max-height: 100%;
+    overflow: inherit;
+}
+
+
+.header .menu-btn:checked + .menu-icon .navicon{
+    background: transparent;
+}
+
+.header .menu-btn:checked + .menu-icon .navicon::before{
+    transform: rotate(-45deg);
+    background-color: var(--color-white)
+}
+
+.header .menu-btn:checked + .menu-icon .navicon::after{
+    transform: rotate(45deg) ;
+    background-color: var(--color-white)
+}
+
+.header .menu-btn:checked + .menu-icon .navicon::before, 
+.header .menu-btn:checked + .menu-icon .navicon::after{ /*why do this ?? we could just add top 0 at both selector !!*/
+    top: 0;
+}
+
+/*responsive*/
+@media screen and (max-width: 767px) {
+    .hero-header-content{
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .hero-header-content .menu-icon{
+        display: block;
+    }
+    #Repertories{
+        display: none; 
+    }
+
+.hero-header-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    height: 32px;
+    padding-top: 20px;
+}
+
+.hero-body{
+    max-width: 357px;
+    text-align: center;
+;
+}
+
+
+.hero-body p {
+    max-width: 279px;
+    text-align: center;
+
+}
+
+}
+
+/*-------------------------What we do SECTION---------------------------------*/
+.what-we-do-section{
+    display: flex;
+    height: 700px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+.div-wwd-intro{
+    display: flex;
+    text-align: center;
+    max-width: 637px;
+    max-height: 184px;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 184px;
+
+}
+
+.div-wwd-intro h1{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+}
+
+
+.div-wwd-options [class^="holberton_school-icon-"] {
+    font-size: 94px;
+    color: #FF6565;
+    display: block;
+}
+
+.div-wwd-options {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: fit-content;
+}
+
+.div-wwd-options h1{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.div-wwd-options p{
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.div-wwd-recording,
+.div-wwd-video, 
+.div-wwd-music,
+.div-wwd-listening {
+    text-align: center;
+    width: 207px;
+    margin: 20px;
+    height: 180px;
+}
+/*----responsive----*/
+@media screen and (max-width: 767px) {
+    .what-we-do-section{
+    height: 900px;
+}
+    .div-wwd-options {
+        max-width: 472px;
+        height: 469px;
+        align-content: space-between;
+    }
+
+    .div-wwd-recording,
+    .div-wwd-video, 
+    .div-wwd-music,
+    .div-wwd-listening {
+         margin: 10px 0;
+         max-width: 236px;
+    }
+}
+
+/* I did two media queries in different ways, one adding fixed height for 
+wwd-options and the other adding fit-content, gap and padding, i wanted to practice both ways.*/
+
+@media screen and (max-width: 480px){
+    .what-we-do-section{
+        height: fit-content;
+        gap: 200px;
+    }
+
+
+    .div-wwd-options {
+        max-width: 207px;
+        height: fit-content;
+        align-content: space-between;
+        gap: 80px;
+        padding-bottom: 100px;
+    }
+    .div-wwd-recording,
+    .div-wwd-video, 
+    .div-wwd-music,
+    .div-wwd-listening {
+         margin: 10px 0;
+         max-width: 207px;
+         max-height: 193px;
+    }
+
+    .div-wwd-intro{
+    text-align: center;
+    width: 325px;
+    height: fit-content;
+    margin-top: 100px;
+
+}
+}
+
+/*or-section*/
+.our-results-section{
+    background-image: url(./images/headphones_hero_2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    height: fit-content;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+.or-intro-div{
+    max-width: 637px;
+    text-align: center;
+    color: white;
+    gap: 50px;
+}
+.or-intro-div h1{
+    padding-top: 80px;
+    font-weight: 600;
+}
+.or-intro-div p{
+    line-height: 26px;
+    margin-top: 45px;
+    font-weight: 300;
+}
+
+.or-icons-div{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+.pentagon-result{
+    background-image: url('./images/pentagone.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 190px;
+    height: 190px;
+    text-align: center;
+    position: relative;
+}
+
+.pentagon-result-text{
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    color: white;
+    margin: none;
+}
+
+.pentagon-result-text h3{
+    font-size: 45px;
+    margin: 0 !important;
+}
+
+/*-----responsive-------*/
+
+@media screen and (max-width: 767px) {
+    .our-results-section{
+    height: 876px;
+}
+    
+    .or-icons-div{
+        max-width: 500px;
+        height: 469px;
+        align-content: space-between;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .our-results-section{
+        height: fit-content;
+        gap: 100px;
+    }
+
+    .or-icons-div {
+        max-width: 207px;
+        height: fit-content;
+        align-content: space-between;
+        gap: 80px;
+        padding-bottom: 100px;
+    }
+
+    .or-intro-div {
+        padding-top: 80px;
+        display: flex; 
+        flex-direction: column; 
+        align-items: center;
+        gap: 20px;
+    }
+
+    .or-intro-div p{
+        width: 305px;
+        margin-top: 0; 
+        text-align: center;
+    }
+}
+
+/*-------------contact-us----------*/
+
+.contact-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    flex-direction: column;
+}
+
+.contact-section h3{
+    font-size: 50px;
+    align-self: center;
+    margin: 0 !important;
+    font-weight: 600;
+}
+.contact-section .dumb-button-div{
+    align-self: center;
+}
+
+#dumb-button{
+    background-color: #FF6565;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Source Sans Pro', sans-serif;
+    border-radius: 30px;
+    height: 55px;
+    width: 200px;
+    font-weight: 600;
+}
+
+.contact-div{
+    display: flex;
+    flex-direction: column;
+    width: 335px;
+    height: 533px;
+    gap: 60px;
+
+}
+
+.inputs-div{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+}
+
+.input-label {
+    order: -1;
+}
+.input-div{
+    height: fit-content;
+    font-size: 200px;
+    height: 100%;
+}
+
+.input-data {
+    background: transparent;
+    border: none; 
+    border-bottom: 1px solid #071629;
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #071629;
+    outline: none;
+    width: 100%;
+    line-height: 3;
+}
+
+.input-data::placeholder {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/*------footer-section-------*/
+
+.footer-section{
+    display: flex;
+    background-color: #000000;
+    flex-direction: column;
+    height: 289px;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+    height: 80px;
+    align-items: flex-end;
+    padding-top: 70px;
+}
+
+#footer-logo-img{
+    width: 220px;
+}
+
+.LA-SIGNATURE-DE-HOLBERTON-SCHOOL{
+    display: flex;
+    color: white;
+    padding-top: 50px;
+    align-self: center;
+    justify-self: flex-end;
+    opacity: 0.3;
+}
+
+#social-icons{
+    width: 150px;
+}
+
+/*------responsive-------*/
+
+@media screen and (max-width: 767px) {
+    .footer-section{
+        max-width: 767px;        
+    }
+
+    .footer-div{
+        max-width: 600px;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    .footer-div{
+        display: flex;
+        flex-direction: column;
+        height: 300;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #social-icons{
+        padding-bottom: 10px;
+    }
+}
